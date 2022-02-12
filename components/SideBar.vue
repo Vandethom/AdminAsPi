@@ -2,26 +2,26 @@
     <div class="side_bar">
         <p id='logo'>π</p>
         <ul>
-            <div id='side_menu_home'>
+            <a href='/' id='side_menu_home'>
                 <img src='@/assets/images/home.png' alt="Home icon">
                 <p>Accueil</p>
-            </div>
-            <div id='side_menu_dashboard'>
+            </a>
+            <a href='/' id='side_menu_dashboard'>
                 <img src='@/assets/images/dashboard.png' alt="Dashboard icon">
                 <p>Dashboard</p>
-            </div>
-            <div id='side_menu_database'>
+            </a>
+            <a href='/database' id='side_menu_database'>
                 <img src='@/assets/images/database.png' alt="database icon">
                 <p>Database</p>
-            </div>
-            <div id='side_menu_settings'>
+            </a>
+            <a href='/' id='side_menu_settings'>
                 <img src='@/assets/images/settings.png' alt="settings icon">
                 <p>Paramètres</p>
-            </div>
-            <div id='side_menu_disconnect'>
+            </a>
+            <a href='/' id='side_menu_disconnect'>
                 <img src='@/assets/images/disconnect.png' alt="log off icon">
                 <p>Déconnexion</p>
-            </div>
+            </a>
         </ul>
     </div>
 </template>
@@ -40,25 +40,32 @@ export default {
         height: 100vh;
 
         #logo {
-            margin: 0 auto;
+            padding-top: 4vh;
+            margin: 0 0 12vh 35%;
             font-size: 80px;
             font-family: 'Vollkorn';
             color: #FAE3B4;
         }
 
-        div {
-            margin-top: 40px;
+        a {
             display: flex;
+            cursor: pointer;
             align-items: center;
             font-size: 18px;
             font-family: 'Vollkorn';
+            text-decoration: none;
             color: #efefef;
+            margin-bottom: 10px;
             
             img {
-                width: 50px;
-                height: 50px;
+                width: 55px;
+                height: 55px;
                 margin-right: 12px;
             }
+        }
+
+        #side_menu_disconnect {
+            margin-top: 7.5vh;
         }
     }
 </style>

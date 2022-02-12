@@ -1,5 +1,8 @@
 <template>
-  <SideBar />
+  <div>
+    <SearchBar />
+    <SideBar />
+  </div>
 </template>
 
 <script>
