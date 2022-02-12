@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ title }}</h1>
+  <h1 id='page_title'>{{ page_title }}</h1>
 </template>
 
 <script>
@@ -7,19 +7,14 @@ export default {
     name: 'PageTitle',
 
     'props': {
-        title: {
-            type: String
-        }
+        page_title: String
     }
 }
 </script>
 
-<style>
+<style lang='scss'>
     h1 {
-        position: relative;
-        top: 65px;
-        left: 275px;
-        margin: 0;
+        margin: 3.5vh -7vw;
         font-size: 30px;
         color: #efefef;
     }
