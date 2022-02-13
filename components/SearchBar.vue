@@ -16,11 +16,9 @@ export default {
 
 <style lang='scss'>
     .search_bar {
-        width: 100vw;
+        width: 100%;
         height: 45px;
         background-color: #011627;
-        position: absolute;
-        top: 0;
 
         input {
             height: 25px;

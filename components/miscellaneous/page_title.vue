@@ -14,7 +14,9 @@ export default {
 
 <style lang='scss'>
     h1 {
-        margin: 3.5vh -7vw;
+        position: absolute;
+        top: 60px;
+        left: 275px;
         font-size: 30px;
         color: #efefef;
     }

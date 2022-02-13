@@ -69,13 +69,6 @@ export default {
       margin-left: 45px;
     }
 
-    hr {
-      width: 55vw;
-      margin: 45px auto;
-      border-top: 1px solid #FAE3B4;
-      filter: drop-shadow(0 2px 12px #FAE3B4);
-    }
-
     .main_section {
         margin: 45px 0 60px 10vw;
 
