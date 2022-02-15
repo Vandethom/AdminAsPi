@@ -27,9 +27,9 @@
       <label for='theme'>
         Thème
         <input
-          list='theme'
-          v-on:input='preview(course_preview.theme)'
-          v-model='course_preview.theme'
+			list='theme'
+			v-on:input='preview(course_preview.theme)'
+			v-model='course_preview.theme'
           >
         <datalist id='theme'>
             <option value='Data' />
@@ -37,6 +37,15 @@
             <option value='Géométrie' />
             <option value='Fonctions' />
         </datalist>
+      </label>
+      <label for='content'>
+        Contenu
+      <textarea
+			name='content'
+			id='content'
+			v-model='course_preview.content'
+			v-on:input='preview(course_preview.content)'
+			/>
       </label>
   </form>
 </template>
@@ -48,9 +57,10 @@ export default {
     data() {
       return {
         course_preview: {
-          level: null,
-          theme: null,
-          title: null
+			content: null,
+			level: null,
+			theme: null,
+			title: null
         }
       }
     },
@@ -67,23 +77,27 @@ export default {
 
 <style lang='scss'>
     .create_course_form {
-        width: 260px;
+        width: 45vw;
         display: flex;
         flex-direction: column;
 
         label {
-            text-align: right;
-            color: #efefef;
-            font-family: 'Vollkorn';
-            font-size: 15px;
+			display: grid;
+			grid-template-columns: 105px 175px;
+			padding: 5px;
+			font-family: 'Vollkorn';
+			color: #efefef;
+			width: 40px;
+			height: 32px;
         }
+
         input {
-            height: 24px;
-            width: 180px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #121212;
-            background: #efefef;
-            margin: 6px;
+          	justify-self: center;
+        }
+
+        #content {
+			width: 40vw;
+			height: 40vh;
         }
     }
 </style>

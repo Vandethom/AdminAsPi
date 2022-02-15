@@ -33,6 +33,7 @@
         :title='this.preview.title'
         :level='this.preview.level'
         :theme='this.preview.theme'
+        :content='this.preview.content'
       />
     </div>
   </div>

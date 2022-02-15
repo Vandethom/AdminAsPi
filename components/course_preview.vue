@@ -2,9 +2,12 @@
     <section class="course_preview">
         <h2>Prévisualisation</h2>
         <HorizontalRule />
-        <h3>{{ title }}</h3>
-        <p>{{ level }}</p>
-        <p>{{ theme }}</p>
+        <article class='rendering_preview'>
+            <h3 class='preview_title'>{{ title }}</h3>
+            <p class='preview_level'>{{ level }}</p>
+            <p class='preview_theme'>{{ theme }}</p>
+            <p class='preview_content'>{{ content }}</p>
+        </article>
     </section>
 </template>
 
@@ -19,6 +22,7 @@ export default {
     },
 
     props: {
+        content: String,
         level: String,
         theme: String,
         title: String
@@ -44,5 +48,32 @@ export default {
             font-family: 'Vollkorn';
             margin-left: 16px;
         }
+
+        .rendering_preview {
+            display: flex;
+            height: 92vh;
+            flex-direction: column;
+            margin-left: 16px;
+            
+            .preview_title {
+                align-self: center;
+                font-family: 'Vollkorn';
+            }
+
+            .preview_level {
+                transform: translate(450px, -80px);
+            }
+
+            .preview_theme {
+                transform: translate(420px, -110px)
+            }
+
+            .preview_content {
+                overflow: scroll;
+                white-space: pre-wrap;
+                padding: 12px;
+                transform: translateY(-75px);
+            }
+        }   
     }
 </style>
